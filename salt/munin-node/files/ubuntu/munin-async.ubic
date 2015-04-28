@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+use Ubic::Service::SimpleDaemon;
+
+my $service = Ubic::Service::SimpleDaemon->new( {
+    name   => 'munin-async',
+    bin    => '/usr/share/munin/munin-asyncd --spool /var/lib/munin-async/ --fork',
+} );
